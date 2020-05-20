@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/chapterListFragment">
+
+    <fragment
+        android:id="@+id/chapterListFragment"
+        android:name="com.yppcat.wanandroid.view.chapter.ChapterListFragment"
+        android:label="Article List"
+        tools:layout="@layout/article_list_fragment">
+
+        <action
+            android:id="@+id/action_chapter_to_article"
+            app:destination="@id/articleListFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleListFragment"
+        android:name="com.yppcat.wanandroid.view.chapter.ArticleListFragment"
+        android:label="Article List"
+        tools:layout="@layout/article_list_fragment2">
+
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/articleFragment" />
+
+        <argument
+            android:name="chapterId"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.yppcat.wanandroid.view.chapter.ArticleFragment"
+        android:label="Article Detail"
+        tools:layout="@layout/article_fragment">
+
+        <argument
+            android:name="linkUrl"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/interviewFragment"
+        android:name="com.yppcat.wanandroid.view.interview.InterViewFragment"
+        android:label="InterView"
+        tools:layout="@layout/inter_view_fragment">
+
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/articleFragment" />
+    </fragment>
+
+</navigation>
