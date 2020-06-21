@@ -24,7 +24,7 @@ class InterViewViewModel : ViewModel() {
 //            val interResponse = LitePal.findAll<Interview>()
 //            Result.success(interResponse)
 //        } catch (e: Exception) {
-//            Result.failure<MutableList<Interview>>(e)
+//            Result.failure<MutableList<Interview>>(e
 //        }
 //        emit(result)
 //    }

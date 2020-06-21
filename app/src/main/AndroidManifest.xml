@@ -19,6 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <nav-graph android:value="@navigation/mobile_navigation" />
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts">
+
+            </meta-data>
         </activity>
     </application>
 

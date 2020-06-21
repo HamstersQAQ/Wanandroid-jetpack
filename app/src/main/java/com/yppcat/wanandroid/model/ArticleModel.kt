@@ -11,7 +11,6 @@ object ArticleModel {
 
         val chapterResponse = WanNetwork.getChapters()
         if (chapterResponse.errorCode == 0) {
-            Log.d("ArticleListViewModel","hhh")
             val chapters = chapterResponse.data
             Result.success(chapters)
         } else {

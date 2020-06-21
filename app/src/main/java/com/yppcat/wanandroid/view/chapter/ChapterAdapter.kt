@@ -1,4 +1,4 @@
-package com.yppcat.wanandroid
+package com.yppcat.wanandroid.view.chapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.yppcat.wanandroid.R
 import com.yppcat.wanandroid.network.data.ArticleList
 import com.yppcat.wanandroid.network.data.Chapter
 

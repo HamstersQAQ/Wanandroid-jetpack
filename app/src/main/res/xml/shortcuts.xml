@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/interview"
+        android:shortcutLongLabel="@string/interview"
+        android:shortcutDisabledMessage="@string/interview"
+        tools:targetApi="n_mr1"
+        android:shortcutId="static1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.yppcat.wanandroid"
+            android:targetClass="com.yppcat.wanandroid.view.MainActivity" />
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+</shortcuts >

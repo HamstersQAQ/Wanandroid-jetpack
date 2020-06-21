@@ -1,5 +1,6 @@
 package com.yppcat.wanandroid.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -11,6 +12,10 @@ import com.yppcat.wanandroid.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object{
+        const val intentToInterView = "com.wanandroid.interview"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +38,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        if (intentToInterView == intent?.action){
+            navigationView.setCheckedItem(R.id.interviewFragment)
+        }
+    }
+
     private fun setupNavigation() {
         val navController = findNavController(this,
             R.id.nav_host_fragment
@@ -45,5 +57,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
         setupWithNavController(navigationView, navController)
+
     }
 }

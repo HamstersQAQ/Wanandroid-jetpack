@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.yppcat.wanandroid.ChapterAdapter
 import com.yppcat.wanandroid.R
 import kotlinx.android.synthetic.main.article_list_fragment.*
 
@@ -41,7 +40,10 @@ class ChapterListFragment : Fragment() {
         recyclerview.layoutManager = layoutManager
         activity?.let {
             adapter =
-                ChapterAdapter(it, viewModel.chapterList)
+                ChapterAdapter(
+                    it,
+                    viewModel.chapterList
+                )
             adapter.setOnClickListener(object : ChapterAdapter.OnClickListener {
                 override fun onClick(position: Int) {
                     val action =

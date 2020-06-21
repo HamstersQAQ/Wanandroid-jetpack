@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Banner">
+        <attr name="showIndicator" format="boolean" />
+        <attr name="dotLightColor" format="color"/>
+        <attr name="dotDarkColor" format="color"/>
+        <attr name="indicatorBackgroundColor" format="color"/>
+        <attr name="indicator_gravity" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -2,4 +2,15 @@
     <string name="app_name">玩安卓</string>
     <string name="chapter">公众号</string>
     <string name="interview">面试题</string>
+    <string name="project">项目</string>
+    <string name="reading">阅读</string>
+    <string name="read_time">阅读时长</string>
+    <string name="write_note">写笔记</string>
+    <string name="exercise">锻炼</string>
+    <string name="weight">体重</string>
+    <string name="game">游戏</string>
+    <string name="consume">消费</string>
+    <string name="save">保存</string>
+    <string name="daily">日记</string>
+    <string name="home">主页</string>
 </resources>

@@ -10,6 +10,17 @@
             android:id="@+id/interviewFragment"
             android:title="@string/interview">
         </item>
+
+        <item android:id="@+id/projectFragment"
+            android:title="@string/project">
+        </item>
+
+        <item android:id="@+id/DailyFragment"
+            android:title="@string/daily">
+        </item>
+        <item android:id="@+id/homeFragment"
+            android:title="@string/home">
+        </item>
     </group>
 
 </menu>

@@ -21,17 +21,15 @@ class SimpleWorker(context: Context, params: WorkerParameters) : Worker(context,
                 Jsoup.connect("https://github.com/Moosphan/Android-Daily-Interview").get()
             val links = document.getElementsByTag("li")
             for (element in links) {
-                if (element.childNode(0).toString().contains("第")) {
+                if (element.childNode(0).toString().contains("？")) {
                     val index = element.childNode(0).toString().substring(8, 15)
                     val rootElement = element.allElements[0]
                     val linkUrl = rootElement.select("a[href]").attr("href")
                     val titleTotal = rootElement.select("a[href]")[0].childNode(0).toString()
-                    val title = titleTotal.run {
-                        substring(8, this.length - 9)
-                    }
-                    val interview = Interview(index_str = index, title = title, link = linkUrl,hadStudy = false)
+                    Log.d(TAG, "doWork: $titleTotal")
+                    val interview = Interview( title = titleTotal, link = linkUrl,hadStudy = false)
                     interview.save()
-                    Log.d(TAG, "index = $index  linkUrl = $linkUrl   title = $title")
+                    Log.d(TAG, "index = $index  linkUrl = $linkUrl   title = $titleTotal")
                 }
             }
         } catch (e: IOException) {

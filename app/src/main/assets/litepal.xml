@@ -4,5 +4,6 @@
     <version value="1" />
     <list>
         <mapping class="com.yppcat.wanandroid.database.Interview" />
+        <mapping class="com.yppcat.wanandroid.database.Daily" />
     </list>
 </litepal>

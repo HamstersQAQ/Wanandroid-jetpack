@@ -1,4 +1,4 @@
-package com.yppcat.wanandroid
+package com.yppcat.wanandroid.util
 
 import android.content.Context
 import android.content.SharedPreferences
