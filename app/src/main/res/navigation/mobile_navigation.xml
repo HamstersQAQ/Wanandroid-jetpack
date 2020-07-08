@@ -6,6 +6,16 @@
     app:startDestination="@+id/homeFragment">
 
     <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yppcat.wanandroid.view.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/article_to_detail"
+            app:destination="@id/articleFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/chapterListFragment"
         android:name="com.yppcat.wanandroid.view.chapter.ChapterListFragment"
         android:label="Article List"
@@ -72,15 +82,5 @@
         android:name="com.yppcat.wanandroid.view.daily.DailyFragment"
         android:label="Daily"
         tools:layout="@layout/daily_fragment" />
-
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.yppcat.wanandroid.view.home.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/home_fragment">
-        <action
-            android:id="@+id/article_to_detail"
-            app:destination="@id/articleFragment" />
-    </fragment>
 
 </navigation>

@@ -75,7 +75,7 @@ class HomeFragment : Fragment() {
                         banner.setOnPageClickListener(object : Banner.onPageClickListener {
                             override fun onPageClick(index: Int) {
                                 val action =
-                                    HomeFragmentDirections.articleToDetail(it[index].url)
+                                    HomeFragmentDirections.articleToDetail(it[index - 1].url)
                                 findNavController().navigate(action)
                             }
 
