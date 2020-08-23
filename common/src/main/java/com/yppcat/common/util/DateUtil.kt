@@ -1,6 +1,6 @@
 @file:Suppress("CAST_NEVER_SUCCEEDS")
 
-package com.yppcat.wanandroid.util
+package com.yppcat.common.util
 
 import android.annotation.SuppressLint
 import java.text.SimpleDateFormat

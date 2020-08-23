@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.yppcat.wanandroid.app.WanApplication
 import com.yppcat.wanandroid.database.Daily
 import com.yppcat.wanandroid.model.DailyModel
-import com.yppcat.wanandroid.util.DateUtil
+import com.yppcat.common.util.DateUtil
 
 class DailyViewModel : ViewModel() {
 

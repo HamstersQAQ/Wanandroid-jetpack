@@ -6,14 +6,12 @@ import android.util.Log
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import com.yppcat.common.network.ServiceCreator
-import com.yppcat.wanandroid.database.Interview
 import com.yppcat.wanandroid.util.Preference
 import com.yppcat.wanandroid.database.SimpleWorker
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import org.jsoup.Jsoup
+import com.yppcat.wanandroid.network.interceptor.AddCookiesInterceptor
+import com.yppcat.wanandroid.network.interceptor.ReceivedCookieInterceptor
+import okhttp3.OkHttpClient
 import org.litepal.LitePal
-import java.io.IOException
 
 class WanApplication : Application() {
 
@@ -32,6 +30,12 @@ class WanApplication : Application() {
         application = applicationContext
         LitePal.initialize(this)
         ServiceCreator.BASE_URL = "https://wanandroid.com"
+        ServiceCreator.addInterceptor(
+            OkHttpClient.Builder()
+                .addInterceptor(ReceivedCookieInterceptor())
+                .addInterceptor(AddCookiesInterceptor())
+                .build()
+        )
 
 
         if (!isLoadJSData) {

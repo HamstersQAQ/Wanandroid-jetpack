@@ -16,6 +16,16 @@ class Preference<T>(private val key: String, private val default: T) : ReadWrite
         fun clear() {
             preference.edit().clear().apply()
         }
+
+        fun putStringSet(key: String, set: Set<String>) = with(preference.edit()) {
+            putStringSet(key, set)
+        }.apply()
+
+        fun  getStringSe(key: String,default : Set<String>) : Set<String>? = with(preference){
+            val value = getStringSet(key,default)
+            value
+        }
+
     }
 
     override fun getValue(thisRef: Any?, property: KProperty<*>): T {
